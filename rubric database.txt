@@ -1,0 +1,28 @@
+CREATE TABLE rubric (
+category TEXT,
+zero TEXT,
+one TEXT,
+two TEXT,
+three TEXT,
+se BOOL,
+num INT);
+
+INSERT INTO rubric VALUES ("Implementation", "Little Implementation", "Less than 50% required functionality implemented", "Less than 90% required functionality implemented", "90% or more required functionality implemented", 0, 1);
+
+INSERT INTO rubric VALUES ("Testing", "No formal testing", "Only one formal testing approach used, (unit, integration, or system) test cases and bug reports provided", "Two formal testing approaches used (unit, integration, or system) test cases and bug reports provided", "Testing approaches used (unit, integration, or system) test cases and bug reports provided", 0, 10);
+
+INSERT INTO rubric VALUES ("Project Utility", "Little", "Somewhat", "Major", "Almost a necessity", 0, 7);
+
+INSERT INTO rubric VALUES ("Likability", "Did not like it", "Liked it to some extent", "Liked it", "Loved it", 0, 2);
+
+INSERT INTO rubric VALUES ("Posters Quality - Content", "Project overview is not provided or is vague; No or almost no analysis and design diagrams", "Project overview provided clearly but no analysis and design diagrams", "Project overview provided clearly with analysis OR design diagrams", "Project overview provided clearly with analysis AND design diagrams", 0, 4);
+
+INSERT INTO rubric VALUES ("Posters Quality - Presentation", "Poor", "Acceptable", "Good", "Excellent", 0, 5);
+
+INSERT INTO rubric VALUES ("Project Management", "No project management evident", "Project management tool shows sprints and demonstrates use of scheduling technique", "Project management tool shows sprints, demonstrates use of scheduling technique, and feasibility study", "Project management tool shows project scope, objectives, success criteria, sprints, demonstrates use of scheduling technique, and feasibility study", 1, 6);
+
+INSERT INTO rubric VALUES ("Requirements Specification (SRS)", "No requirements specification", "SRS provided without categorizing as functional and non-functional", "SRS provided and categorized as functional and non-functional but not as user and system specifications", "SRS provided and categorized as functional and non-functional as well as user and system specifications", 1, 8);
+
+INSERT INTO rubric VALUES ("Analysis & Design", "No formal analysis or design documents", "Demonstrates use of appropriate analysis OR design approaches but only a few respective documents provided", "Demonstrates use of appropriate analysis AND design approaches but only a few respective documents provided", "Demonstrates use of appropriate analysis AND design approaches AND (almost all) respective documents provided", 1, 0);
+
+INSERT INTO rubric VALUES ("Risk Management", "No risk management", "Risks identified", "Risks identified and prioritized (based upon exposure)", "Risks identified and prioritized, and risk mitigation plan provided", 1, 9);
