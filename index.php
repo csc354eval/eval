@@ -7,7 +7,7 @@
   </head>
   <body>
 <?php
-        session_start();
+      session_start();
 
       if (isset($_SESSION))
         {
@@ -31,7 +31,7 @@
 <h1>Projects</h1>
 
 <?php
-        print"<table><tr><th>Projects</th><th>Status</th></tr></table>";
+    print"<table><tr><th>Projects</th><th>Status</th></tr></table>";
 
 
     $serverName = "csc354eval.database.windows.net"; // update me
@@ -42,11 +42,10 @@
     );
     //Establishes the connection
     $conn = sqlsrv_connect($serverName, $connectionOptions);
-    $tsql= "SELECT * FROM rubric.rubric ASC"; 
-    //TOP 20 pc.Name as CategoryName, p.name as ProductName
-    //     FROM [SalesLT].[ProductCategory] pc
-    //    JOIN [SalesLT].[Product] p
-    //     ON pc.productcategoryid = p.productcategoryid";
+    $tsql= "SELECT * FROM TOP 20 pc.Name as CategoryName, p.name as ProductName
+         FROM [SalesLT].[ProductCategory] pc
+        JOIN [SalesLT].[Product] p
+         ON pc.productcategoryid = p.productcategoryid";
     $getResults= sqlsrv_query($conn, $tsql);
     echo ("Reading data from table" . PHP_EOL);
     if ($getResults == FALSE)
