@@ -42,7 +42,7 @@
     );
     //Establishes the connection
     $conn = sqlsrv_connect($serverName, $connectionOptions);
-    $tsql= "SELECT * FROM rubric ASC"; 
+    $tsql= "SELECT * FROM rubric.rubric ASC"; 
     //TOP 20 pc.Name as CategoryName, p.name as ProductName
     //     FROM [SalesLT].[ProductCategory] pc
     //    JOIN [SalesLT].[Product] p
