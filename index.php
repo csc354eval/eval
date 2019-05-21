@@ -41,10 +41,10 @@
     //}
     print_r($getResults);
     print(" Test1 ");
-    for each $getResults as $name
-    {
-      print($name)
-    }
+    //for each $getResults as $name
+    //{
+     // print($name)
+    //}
     //sqlsrv_free_stmt($getResults);
 
 //        $db = new PDO("sqlite:rubric.db");
