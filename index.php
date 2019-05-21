@@ -6,33 +6,22 @@
     <title>Capstone Evaluation</title>
   </head>
   <body>
+    
 <?php
       session_start();
 
-      if (isset($_SESSION))
-        {
-                print"<nav>";
-                print"<a href=\"log_out.php\">Log Out</a>";
-                print" ";
-                print"<a href=\"rubric.php\">Rubric</a>";
-                print"</nav>";
-        }
-       else
-        {
-                print"<nav>";
-                print"<a href=\"sign_in.php\">Sign In</a>";
-                print" ";
-                print"<a href=\"rubric.php\">Rubric</a>";
-                print"</nav>";
-        }
-
+      if (isset($_SESSION)) {
+                print"<nav><a href=\"log_out.php\">Log Out</a>";
+                print" <a href=\"rubric.php\">Rubric</a></nav>";}
+       else {
+                print"<nav><a href=\"sign_in.php\">Sign In</a>";
+                print" <a href=\"rubric.php\">Rubric</a></nav>";}
 ?>
 
 <h1>Projects</h1>
 
 <?php
     print"<table><tr><th>Projects</th><th>Status</th></tr></table>";
-
 
     $serverName = "csc354eval.database.windows.net"; // update me
     $connectionOptions = array(
@@ -42,20 +31,17 @@
     );
     //Establishes the connection
     $conn = sqlsrv_connect($serverName, $connectionOptions);
-    $tsql= "SELECT * FROM TOP 20 pc.Name as CategoryName, p.name as ProductName
-         FROM [SalesLT].[ProductCategory] pc
-        JOIN [SalesLT].[Product] p
-         ON pc.productcategoryid = p.productcategoryid";
+    $tsql= "SELECT * FROM rubric";
     $getResults= sqlsrv_query($conn, $tsql);
-    echo ("Reading data from table" . PHP_EOL);
-    if ($getResults == FALSE)
-        echo (sqlsrv_errors());
-    while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-     echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
-    }
+    //echo ("Reading data from table" . PHP_EOL);
+    //if ($getResults == FALSE)
+    //    echo (sqlsrv_errors());
+    //while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+    //echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
+    //}
     print_r($getResults);
     print(" Test2 ");
-    sqlsrv_free_stmt($getResults);
+    //sqlsrv_free_stmt($getResults);
 
 //        $db = new PDO("sqlite:rubric.db");
 //        $sql = "SELECT * FROM proj_name ASC";
