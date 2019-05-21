@@ -40,7 +40,7 @@
     //echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
     //}
     print_r($getResults);
-    print(" Test2 ");
+    print(" Test3 ");
     //sqlsrv_free_stmt($getResults);
 
 //        $db = new PDO("sqlite:rubric.db");
