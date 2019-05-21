@@ -54,7 +54,7 @@
      echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
     }
     print_r($getResults);
-    print(" Test ");
+    print(" Test2 ");
     sqlsrv_free_stmt($getResults);
 
 //        $db = new PDO("sqlite:rubric.db");
