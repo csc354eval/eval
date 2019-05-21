@@ -43,7 +43,7 @@
     print(" Test3 ");
     for each $getResults as $name
     {
-      print_r($name)
+      print($name)
     }
     //sqlsrv_free_stmt($getResults);
 
