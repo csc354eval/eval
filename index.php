@@ -54,7 +54,7 @@
     while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
      echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
     }
-    print($getResults);
+    print_r($getResults);
     print(" Test ");
     sqlsrv_free_stmt($getResults);
 
