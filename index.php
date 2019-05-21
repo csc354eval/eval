@@ -40,7 +40,7 @@
     //echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
     //}
     print_r($getResults);
-    print(" Test3 ");
+    print(" Test1 ");
     for each $getResults as $name
     {
       print($name)
