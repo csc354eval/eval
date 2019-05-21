@@ -54,6 +54,7 @@
     while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
      echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
     }
+    print($getResults);
     sqlsrv_free_stmt($getResults);
 
 //        $db = new PDO("sqlite:rubric.db");
