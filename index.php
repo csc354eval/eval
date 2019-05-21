@@ -42,7 +42,7 @@
     );
     //Establishes the connection
     $conn = sqlsrv_connect($serverName, $connectionOptions);
-    $tsql= "SELECT * FROM rubric"; 
+    $tsql= "SELECT * FROM rubric ASC"; 
     //TOP 20 pc.Name as CategoryName, p.name as ProductName
     //     FROM [SalesLT].[ProductCategory] pc
     //    JOIN [SalesLT].[Product] p
@@ -55,6 +55,7 @@
      echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
     }
     print($getResults);
+    print(" Test ");
     sqlsrv_free_stmt($getResults);
 
 //        $db = new PDO("sqlite:rubric.db");
